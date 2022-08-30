@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Explore Phone</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center mb-4">Let's Buy some new Phone</h1>
+
+      <div class="mb-3 w-50 mx-auto">
+        <input
+          type="email"
+          class="form-control"
+          id="search-input"
+          placeholder="search by Name"
+        />
+        <button id="btn-search" class="mt-2 btn btn-primary">Search</button>
+        <div id="no-found-msg" class="d-none">
+          <h3 class="text-warning">
+            No Phone Data Found! Please Search Again!
+          </h3>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <div id="card-container" class="row row-cols-1 row-cols-md-3 g-4"></div>
+        <div id="show-all" class="text-center d-none">
+          <button id="btn-show-all" class="mt-2 btn btn-primary">
+            View All
+          </button>
+        </div>
+      </section>
+      <section>
+        <!-- model conteiner start-->
+
+        <!-- Button trigger modal -->
+
+        <div id="model-popup" class="modal" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div id="model-header" class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div id="modal-body" class="modal-body"></div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- model conteiner end -->
+      <section id="loading-spin" class="d-none">
+        <!-- loading spinner -->
+        <div
+          class="d-flex border justify-content-center align-items-center"
+          style="height: 400px"
+        >
+          <div class="fs-3 fw-bold spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <!-- loading spinner -->
+      </section>
+    </main>
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
